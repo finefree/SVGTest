@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG图片伸展收缩</title>
+</head>
+
+<body>
+    <div>
+        <section style="background-repeat: no-repeat;background-position: left top;background-size: 100%;overflow: hidden;">
+            <section style="height: 0;">
+                <section style="margin-bottom: -1px;">
+                    <svg style="background-image: url(img/出口.jpg);pointer-events: none;background-size: 100%;background-repeat: no-repeat;"
+                        version="1.1" viewBox="0 0 345 165" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    </svg>
+                </section>
+                <section style="background-repeat:no-repeat;background-position: left top;background-size: 100%;"> 
+                    <svg style="background-image: url(img/出口1.jpg);background-repeat: no-repeat;background-size: 100%;"viewBox="0 0 345 680">
+                    </svg>
+                </section>
+            </section>
+            <section style="pointer-events: none;">
+                <section style="height: 0;pointer-events: none;transform: scale(1);">
+                    <svg viewBox="0 0 345 147" width="100%" opacity="0"style="pointer-events: none;transform: translateZ(10px);">
+                        <g>
+                            
+                            <rect x="0" y="0" fill="transparent" opacity="0" width="345" height="100%" pointer-events="visible">
+                                <set attributeName="visibility" from="visible" to="hidden" begin="touchstart"dur="0.21s" fill="remove" restart="always"></set>
+                                <animateTransform attributeName="transform" type="translate"values="20000 20000; 20000 20000" begin="touchstart" dur="0.10s" fill="remove"restart="always">
+                                </animateTransform>
+                            </rect>
+                        </g>
+                    </svg>
+                </section>
+                <svg style="margin-bottom: -1px;background-image: url(img/出口.jpg);background-size: 100%;background-repeat:no-repeat;"
+                    viewBox="0 0 345 165">
+                    <g opacity="1" style="pointer-events: none;" transform="translate(0 0)">
+                        <animateTransform attributeName="transform" type="translate" calcMode="discrete"
+                            values="-690 0; -345 0; -345 0" begin="click" dur="1000s" restart="always" fill="remove"
+                            keyTimes="0; 0.001; 1" additive="replace">
+                        </animateTransform>
+                        <animateTransform attributeName="transform" type="translate" calcMode="discrete"
+                            values="-690 0; 0 0; 0 0" begin="touchstart" dur="1000s" restart="always" fill="remove"
+                            keyTimes="0; 0.001; 1" additive="replace">
+                        </animateTransform>
+                        <g style="opacity: 0;pointer-events: visible;">
+                            <set attributeName="visibility" from="visible" to="hidden" begin="touchstart" dur="1.7s"
+                                fill="remove" restart="always">
+                            </set>
+                            <animateTransform attributeName="transform" type="translate"
+                                values="0 8000; 0 6000; 0 4000; 0 1000" begin="touchstart" dur="1s" restart="always"
+                                fill="remove">
+
+                            </animateTransform>
+                            <g>
+                                <set attributeName="visibility" from="visible" to="hidden" begin="click" dur="1.7s"fill="remove" restart="always"></set>
+                                <rect fill="transparent" opacity="0.5" width="345"height="100%" x="0" y="0"style="pointer-events: visible;"></rect>
+                            </g>
+                            <rect x="100%" y="90%" width="100" height="10%" fill="blue" opacity="0.5"></rect>
+                        </g>
+                    </g>
+                    <animate attributeName="opacity" fill="freeze" dur="1000s" values="1; 0; 0" keyTimes="0; 0.001; 1"begin="click">
+                    </animate>
+                    <animate attributeName="opacity" fill="freeze" dur="1000s" values="0; 0;1;1"keyTimes="0; 0.001; 0.002; 1" begin="touchstart">
+                    </animate>
+                    <animate attributeName="width" fill="remove" restart="always" calcMode="spline"keySplines="0.42 0 0.58 1.0; 0.42 0 0.58 1.0; 0.42 0 0.58 1.0" keyTimes="0; 0.001; 0.002; 1"
+                        values="100%; 100%; 468%; 468%" dur="1000s" begin="click" attributeType="CSS"additive="replace">
+                    </animate>
+                    <animate attributeName="width" fill="remove" restart="always" calcMode="spline"keySplines="0.42 0 0.58 1.0; 0.42 0 0.58 1.0" keyTimes="0; 0.001; 1" values="468%; 100%; 100%"
+                        dur="1000s" begin="touchstart" attributeType="CSS" additive="replace">
+                    </animate>
+                </svg>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>
